@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/AppTheme2"
+    tools:context="com.example.administrator.lalala.activitys.TabsForStaff"
+    android:background="@color/bgGray">
+
+    <!--<include-->
+        <!--layout="@layout/topcontralpanel"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:layout_constraintHorizontal_bias="0.0"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--android:id="@+id/include" />-->
+    <android.support.v4.view.ViewPager
+
+        android:id="@+id/vp_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appbarlayout" />
+
+    <!--<android.support.v7.widget.CardView-->
+        <!--android:id="@+id/shapeoftabs"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="0dp"-->
+        <!--android:layout_marginRight="0dp"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:layout_constraintHorizontal_bias="0.0"-->
+        <!--android:layout_marginTop="0dp"-->
+        <!--android:background="@color/qqBlue"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/include">-->
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <!--<include-->
+        <!--android:id="@+id/maintoolbar"-->
+        <!--layout="@layout/maintoolbar"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="0dp"-->
+        <!--android:layout_marginRight="0dp"-->
+        <!--android:layout_marginTop="0dp"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--app:layout_scrollFlags="scroll|enterAlways" />-->
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/maintb"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/nagivationbar1"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ToolbarPopupTheme">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/myicon"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <!--<android.support.design.widget.TabLayout-->
+            <!--android:id="@+id/tabs"-->
+
+            <!--android:layout_width="match_parent"-->
+            <!--android:background="@color/bgGray"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginTop="0dp"-->
+            <!--app:layout_constraintHorizontal_bias="0.0"-->
+            <!--app:layout_constraintLeft_toLeftOf="parent"-->
+            <!--app:layout_constraintRight_toRightOf="parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/maintoolbar"-->
+            <!--app:tabBackground="@color/tabBackground"-->
+            <!--app:tabIndicatorColor="@color/colorAccent"-->
+            <!--app:tabMode="fixed"-->
+            <!--app:tabPaddingEnd="20dp"-->
+            <!--app:tabPaddingStart="20dp"-->
+            <!--app:tabSelectedTextColor="@color/colorAccent"-->
+            <!--app:tabTextColor="@color/unclickableText">-->
+
+        <!--</android.support.design.widget.TabLayout>-->
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/tabs"
+            android:background="@color/bgGray"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            app:tl_indicator_color="@color/colorAccent"
+            app:tl_textSelectColor="@color/colorAccent"
+            app:tl_textUnselectColor="@color/unclickableText"
+            app:tl_tab_space_equal="true"
+            app:tl_tab_padding="10dp"
+            ></com.flyco.tablayout.SlidingTabLayout>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <!--</android.support.v7.widget.CardView>-->
+</android.support.design.widget.CoordinatorLayout>

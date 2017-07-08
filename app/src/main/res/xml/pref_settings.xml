@@ -1,0 +1,11 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceCategory
+    android:title="@string/pref_title_user_settings"
+    android:key="@string/pref_key_user_settings">
+
+</PreferenceCategory>
+    <Preference android:key="@string/pref_key_user_info"/>
+    <SwitchPreference android:key="@string/pref_key_notify_switch"
+        android:title="@string/pref_title_notify_ring"/>
+
+</PreferenceScreen>
